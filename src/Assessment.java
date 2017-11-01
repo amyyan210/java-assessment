@@ -13,7 +13,8 @@ public class Assessment {
         return number1 + number2;
     }
 
-    public static double average(double[] numbers) {
+    // after submitting, changed parameter to take in array of ints
+    public static double average(int[] numbers) {
         double sumOfNumbers = 0;
         for (double number : numbers) {
             sumOfNumbers += number;
