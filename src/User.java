@@ -15,4 +15,10 @@ public class User extends Person {
         }
     }
 
+    //HAS TO BE CALLED toString()
+    @Override
+    public String toString() {
+        return this.firstName + " " + this.lastName;
+    }
+
 }

@@ -24,8 +24,8 @@ public class Assessment {
     public static ArrayList<User> capitalizeRecords(ArrayList<User> users) {
 
         for (User user : users)
-        if (Character.isUpperCase(user.firstName.charAt(0)) || Character.isUpperCase(user.lastName.charAt(0))) { //each object's first and last names are capitalized
-            System.out.println(user.firstName + " " + user.lastName);
+        if (Character.isUpperCase(user.firstName.charAt(0)) && Character.isUpperCase(user.lastName.charAt(0))) { //each object's first and last names are capitalized
+            //System.out.println(user.firstName + " " + user.lastName);
         } else { // use setter to capitalize first letter of each first and last name and return copy of the arrayList
             user.setFirstName(
                     Character.toUpperCase(
@@ -37,7 +37,7 @@ public class Assessment {
                             user.lastName.charAt(0)) +
                             user.lastName.substring(1)
             );
-            System.out.println(user.firstName + " " + user.lastName);
+            //System.out.println(user.firstName + " " + user.lastName);
         }
 
         return users;
@@ -55,7 +55,15 @@ public class Assessment {
         users.add(new User("Amy", "Yanaway", false));
         users.add(new User("Fer", "Mendoza", true));
         users.add(new User("luis", "montealegre", true));
+
+        // Calls overrided toString method on the user class AUTOMATICALLY, added toString after submission
         System.out.println(capitalizeRecords(users));
+
+        // Solution completed after submitting
+//        ArrayList<User> newUserList = capitalizeRecords(users);
+//        for (User user : newUserList) {
+//            System.out.println(user.firstName + " " + user.lastName);
+//        }
     }
 
 }
